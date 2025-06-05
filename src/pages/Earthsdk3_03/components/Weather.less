@@ -1,0 +1,21 @@
+.WeatherBox {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: rgb(38 45 51);
+    border-radius: 8px;
+    .Box {
+        width: 200px;
+        display: flex;
+        align-items: center;
+        :global {
+            .ant-slider {
+                width: 100%;
+            }
+        }
+        .title {
+            color: #fff;
+            width: 100px;
+        }
+    }
+}

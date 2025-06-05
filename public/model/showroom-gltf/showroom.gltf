@@ -1,0 +1,294 @@
+{
+	"asset":
+	{
+		"version": "2.0",
+		"generator": "Unreal Engine 5.1.1 glTF Exporter 1.3.1"
+	},
+	"scene": 0,
+	"accessors": [
+		{
+			"bufferView": 0,
+			"count": 34506,
+			"type": "SCALAR",
+			"componentType": 5123
+		},
+		{
+			"bufferView": 1,
+			"count": 10634,
+			"type": "VEC3",
+			"componentType": 5126,
+			"min": [ -37.2332001, -0.451736033, -27.0554276 ],
+			"max": [ 120.577545, 18.6122055, 33.0249596 ]
+		},
+		{
+			"bufferView": 2,
+			"count": 10634,
+			"type": "VEC3",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 3,
+			"count": 10634,
+			"type": "VEC4",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 4,
+			"count": 10634,
+			"type": "VEC2",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 5,
+			"count": 10634,
+			"type": "VEC2",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 6,
+			"count": 29184,
+			"type": "SCALAR",
+			"componentType": 5123
+		},
+		{
+			"bufferView": 7,
+			"count": 5170,
+			"type": "VEC3",
+			"componentType": 5126,
+			"min": [ -8.58774185, 1.76696289, -1.47473013 ],
+			"max": [ -5.93837643, 3.853477, 0.853026688 ]
+		},
+		{
+			"bufferView": 8,
+			"count": 5170,
+			"type": "VEC3",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 9,
+			"count": 5170,
+			"type": "VEC4",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 10,
+			"count": 5170,
+			"type": "VEC2",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 11,
+			"count": 5170,
+			"type": "VEC2",
+			"componentType": 5126
+		}
+	],
+	"buffers": [
+		{
+			"uri": "SM_MERGED_StaticMeshActor_344.bin",
+			"byteLength": 1012404
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 69012,
+			"target": 34963
+		},
+		{
+			"buffer": 0,
+			"byteLength": 127608,
+			"byteOffset": 69012,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 127608,
+			"byteOffset": 196620,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 170144,
+			"byteOffset": 324228,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 85072,
+			"byteOffset": 494372,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 85072,
+			"byteOffset": 579444,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 58368,
+			"byteOffset": 664516,
+			"target": 34963
+		},
+		{
+			"buffer": 0,
+			"byteLength": 62040,
+			"byteOffset": 722884,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 62040,
+			"byteOffset": 784924,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 82720,
+			"byteOffset": 846964,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 41360,
+			"byteOffset": 929684,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 41360,
+			"byteOffset": 971044,
+			"target": 34962
+		}
+	],
+	"images": [
+		{
+			"uri": "WorldGridMaterial_BaseColor.png"
+		},
+		{
+			"uri": "WorldGridMaterial_MetallicRoughness.png"
+		},
+		{
+			"uri": "WorldGridMaterial_Normal.png"
+		},
+		{
+			"uri": "standardSurface5_MetallicRoughness.png"
+		}
+	],
+	"materials": [
+		{
+			"name": "WorldGridMaterial",
+			"pbrMetallicRoughness":
+			{
+				"baseColorTexture":
+				{
+					"index": 0
+				},
+				"metallicRoughnessTexture":
+				{
+					"index": 1
+				}
+			},
+			"normalTexture":
+			{
+				"index": 2
+			}
+		},
+		{
+			"name": "standardSurface5",
+			"pbrMetallicRoughness":
+			{
+				"metallicRoughnessTexture":
+				{
+					"index": 3
+				}
+			}
+		}
+	],
+	"meshes": [
+		{
+			"name": "SM_MERGED_StaticMeshActor_344",
+			"primitives": [
+				{
+					"attributes":
+					{
+						"POSITION": 1,
+						"NORMAL": 2,
+						"TANGENT": 3,
+						"TEXCOORD_0": 4,
+						"TEXCOORD_1": 5
+					},
+					"indices": 0,
+					"material": 0
+				},
+				{
+					"attributes":
+					{
+						"POSITION": 7,
+						"NORMAL": 8,
+						"TANGENT": 9,
+						"TEXCOORD_0": 10,
+						"TEXCOORD_1": 11
+					},
+					"indices": 6,
+					"material": 1
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"mesh": 0
+		}
+	],
+	"samplers": [
+		{
+			"name": "WorldGridMaterial_BaseColor",
+			"minFilter": 9987,
+			"magFilter": 9729
+		},
+		{
+			"name": "WorldGridMaterial_MetallicRoughness",
+			"minFilter": 9987,
+			"magFilter": 9729
+		},
+		{
+			"name": "WorldGridMaterial_Normal",
+			"minFilter": 9987,
+			"magFilter": 9729
+		},
+		{
+			"name": "standardSurface5_MetallicRoughness",
+			"minFilter": 9987,
+			"magFilter": 9729
+		}
+	],
+	"scenes": [
+		{
+			"nodes": [ 0 ]
+		}
+	],
+	"textures": [
+		{
+			"name": "WorldGridMaterial_BaseColor",
+			"sampler": 0,
+			"source": 0
+		},
+		{
+			"name": "WorldGridMaterial_MetallicRoughness",
+			"sampler": 1,
+			"source": 1
+		},
+		{
+			"name": "WorldGridMaterial_Normal",
+			"sampler": 2,
+			"source": 2
+		},
+		{
+			"name": "standardSurface5_MetallicRoughness",
+			"sampler": 3,
+			"source": 3
+		}
+	]
+}
