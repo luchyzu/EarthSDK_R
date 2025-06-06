@@ -1,9 +1,8 @@
 import styles from './PoiSelector.less';
 import { useSetState, useUnmount, useMemoizedFn } from 'ahooks';
 import { useModel } from 'umi';
-import FormSelect from '@/components/forms/FormSelect'
 import { ESImageLabel, ESPoi3D, ESPoi2D, ESHuman, ESHumanPoi, ESCar } from 'earthsdk3'
-import { Button, Row, Col } from 'antd';
+import { Button, Row, Col, Select } from 'antd';
 import { imagePoiOptions, poi3DOptions, poi2DOptions, humanOptions, humanPoiOptions, } from '@/utils/utils';
 
 
@@ -22,7 +21,7 @@ export default (props: PropsType) => {
             '选择2DPOI样式': undefined,
             '选择人员创建': undefined,
             '选择人员Poi创建': undefined,
-        },
+        } as any,
         PoiSelectorList: [
             {
                 title: '选择图片POI样式',
@@ -52,8 +51,8 @@ export default (props: PropsType) => {
         ]
     });
 
-    const changeSelect = (item, value) => {
-        const findItem = item.options.find(v => v.value === value)
+    const changeSelect = (item: { options: any[]; enName: any; title: any; }, value: string) => {
+        const findItem = item.options.find((v: { value: any; }) => v.value === value)
 
         handleAction(item.enName, { ...findItem, title: item.title })
 
@@ -71,7 +70,7 @@ export default (props: PropsType) => {
                 createImagePoi.editing = true
                 // 监听widgetEvent事件   图片对象被拾取事件
                 createImagePoi.allowPicking = true //允许被拾取
-                createImagePoi.widgetEvent.don((e) => {
+                createImagePoi.widgetEvent.don((e: { type: any; }) => {
                     console.log('widgetEvent信息', e, '拾取的可视化对象', createImagePoi.name)
                     switch (e.type) {
                         // case 'mouseEnter':
@@ -120,6 +119,7 @@ export default (props: PropsType) => {
                 human.animation = selectedHumen.animation
                 human.scale = [20, 20, 20]
                 human.editing = true
+                // @ts-ignore
                 humanData.push(human)
                 setState({
                     humanData,
@@ -137,6 +137,7 @@ export default (props: PropsType) => {
                 humanPoi.animation = selectedHumenPoi.animation
                 humanPoi.poiMode = selectedHumenPoi.poiMode
                 humanPoi.editing = true
+                //@ts-ignore
                 humanPoiData.push(humanPoi)
                 setState({
                     humanPoiData,
@@ -146,6 +147,12 @@ export default (props: PropsType) => {
                 break;
             // no default
         }
+        Object.keys(PoiSelectorValueMap).forEach(key => {
+            PoiSelectorValueMap[key] = undefined
+        })
+        setState({
+            PoiSelectorValueMap
+        })
     },
     );
 
@@ -163,6 +170,7 @@ export default (props: PropsType) => {
         car.mode = 'policeCar' //警车模型 (仅有)
         car.scale = [20, 20, 20] //缩放
         car.editing = true
+        // @ts-ignore
         carData.push(car)
         setState({
             carData
@@ -175,21 +183,19 @@ export default (props: PropsType) => {
             <div className={styles.PoiSelector}>
                 <Row gutter={8}>
                     {
-                        state.PoiSelectorList.map(item => (
+                        state.PoiSelectorList.map((item: any) => (
                             <Col span={12}>
                                 <div className={styles.Box}>
-                                    <FormSelect
-                                        options={item.options}
+
+                                    <Select
                                         key={item.title}
-                                        value={undefined}
-                                        style={{ width: 150 }}
-                                        fieldProps={{
-                                            placeholder: item.title,
-                                            Search: false,
-                                            onChange: (e: string) => {
-                                                changeSelect(item, e)
-                                            }
+                                        placeholder={item.title}
+                                        onChange={(e: string) => {
+                                            changeSelect(item, e)
                                         }}
+                                        style={{ width: 150, marginBottom: 8 }}
+                                        value={state.PoiSelectorValueMap?.[item.title]}
+                                        options={item.options}
                                     />
                                 </div>
                             </Col>

@@ -1,4 +1,4 @@
-import { Slider, Switch } from "antd";
+import { Slider } from "antd";
 import styles from './Weather.less';
 import { useSetState, useUnmount } from 'ahooks';
 import type { SliderSingleProps } from 'antd';
@@ -40,10 +40,10 @@ export default () => {
             '色相': 0,
             '饱和度': 1,
             'gamma': 1,
-        }
+        } as any
     });
 
-    const changeNum = (value, item) => {
+    const changeNum = (value: number, item: { title: any; enName: any; }) => {
         const imageryLayer = objmState.imageryLayer
         const WeatherVlaue = state.WeatherVlaue
         WeatherVlaue[item.title] = value

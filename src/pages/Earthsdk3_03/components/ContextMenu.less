@@ -1,0 +1,74 @@
+.ContextMenu {
+    position: fixed;
+    z-index: 1000;
+    /* 确保菜单显示在其他元素上方 */
+    background: #1e2a3a;
+    /* 深色背景，适合地球应用 */
+    border-radius: 4px;
+    /* 圆角边框 */
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.3);
+    /* 阴影效果 */
+    padding: 5px 0;
+    min-width: 150px;
+
+    .menuList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .menuItem {
+            padding: 8px 16px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            /* 图标样式 */
+            i {
+                margin-right: 8px;
+                font-size: 16px;
+            }
+
+            /* 鼠标悬停效果 */
+            &:hover {
+                background-color: #409eff;
+            }
+
+            /* 子菜单样式 */
+            &.submenu {
+
+                /* 子菜单箭头图标 */
+                .submenuArrow {
+                    position: absolute;
+                    right: 10px;
+                    margin-right: 0;
+                }
+
+                /* 子菜单列表 */
+                .submenuList {
+                    display: none;
+                    /* 默认隐藏 */
+                    position: absolute;
+                    left: 100%;
+                    /* 在父菜单右侧显示 */
+                    top: 0;
+                    background: #1e2a3a;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.3);
+                    padding: 0;
+                    min-width: 120px;
+                    list-style: none;
+                }
+
+                /* 鼠标悬停时显示子菜单 */
+                &:hover {
+                    .submenuList {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

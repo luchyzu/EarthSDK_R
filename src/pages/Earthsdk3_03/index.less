@@ -1,5 +1,6 @@
 .Earthsdk3_03 {
     position: relative;
+
     :global {
         canvas {
             width: 100vw;
@@ -16,10 +17,12 @@
         background: black;
         display: flex;
         align-items: center;
+
         .TopTool {
             display: flex;
             align-items: center;
         }
+
         .changeViewer {
             .btn {
                 margin: 0 8px;
@@ -27,22 +30,27 @@
                 border-color: #909399;
                 color: #fff;
             }
-            
+
         }
+
         .switchBtnViewer {
             display: flex;
             align-items: center;
+
             :global {
                 .ant-switch {
                     background: #909399;
                 }
+
                 .ant-switch-checked {
                     background: #1890ff;
                 }
             }
+
             .switchBtn {
                 display: flex;
                 align-items: center;
+
                 .title {
                     color: #fff;
                     margin: 0 4px;
@@ -68,4 +76,34 @@
     position: absolute;
     top: 65px;
     left: 16px;
+}
+
+.CeLiang {
+    position: absolute;
+    top: 65px;
+    left: 500px;
+}
+
+.Effect {
+    position: absolute;
+    top: 65px;
+    left: 850px;
+}
+
+.PictureViewer {
+    position: absolute;
+    top: 65px;
+    right: 260px;
+}
+
+.MorePicture {
+    position: absolute;
+    top: 65px;
+    right: 0px;
+}
+
+.Tileset3D {
+    position: absolute;
+    top: 65px;
+    right: 0px;
 }

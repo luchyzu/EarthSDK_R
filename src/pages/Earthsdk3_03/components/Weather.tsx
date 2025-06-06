@@ -41,10 +41,10 @@ export default () => {
             '雨': 0,
             '雪': 0,
             '大气层': false,
-        }
+        } as any
     });
 
-    const changeNum = (value, item) => {
+    const changeNum = (value: number | boolean | any, item: { title: any; enName: any; value?: boolean; }) => {
         const objm = objmState.objm
 
         const WeatherVlaue = state.WeatherVlaue

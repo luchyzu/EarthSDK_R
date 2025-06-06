@@ -1,0 +1,75 @@
+.MorePicture {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background: rgb(38 45 51);
+    border-radius: 8px;
+    width: 400px;
+
+    .btn {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .imgBox {
+        width: 100%;
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f0f2f500;
+            border-radius: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #f0f2f500;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #324764;
+        }
+
+        &::-webkit-scrollbar-corner {
+            background: #f0f2f500;
+        }
+
+        .viewItem {
+            padding: 4px;
+            width: 50%;
+            display: inline-block;
+
+            .nameBox {
+                display: flex;
+                align-items: center;
+                margin: 4px 0;
+
+                .close {
+                    margin: 0 4px;
+                    cursor: pointer;
+                }
+            }
+
+            .img {
+                width: 165px;
+                height: 150px;
+                object-fit: fill;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .imgBox:hover {
+        &::-webkit-scrollbar-thumb {
+            background: #818181;
+        }
+    }
+
+}
