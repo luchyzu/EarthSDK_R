@@ -20,27 +20,22 @@ export default () => {
             {
                 title: '点位测量',
                 enName: 'createPoint',
-                createSceneObject: ESLocationMeasurement,
             },
             {
                 title: '距离测量',
                 enName: 'createDistance',
-                createSceneObject: ESDistanceMeasurement,
             },
             {
                 title: '高度测量',
                 enName: 'createHeight',
-                createSceneObject: ESHeightMeasurement,
             },
             {
                 title: '面积测量',
                 enName: 'createArea',
-                createSceneObject: ESAreaMeasurement,
             },
             {
                 title: '表面积测量',
                 enName: 'createSurfaceArea',
-                createSceneObject: ESSurfaceAreaMeasurement,
             },
             {
                 title: '表面积分析',
@@ -49,7 +44,6 @@ export default () => {
             {
                 title: '方位角测量',
                 enName: 'createDirection',
-                createSceneObject: ESDirectionMeasurement,
             },
         ],
     });
